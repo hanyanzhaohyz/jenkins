@@ -1,15 +1,11 @@
-Pipeline{
-    agent{
-        node{
-            label 'sigma'
-        }
-    }
+pipeline {
+    agent any
 
-    stages{
-        stage('编译检查') {
-              steps {
-                  echo "hello world, 我是Jenkins"
-             }
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
         }
     }
 }
